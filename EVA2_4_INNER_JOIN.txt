@@ -1,0 +1,22 @@
+orderdetails-orderid
+products-productname quantity
+categories-categoryname 
+suppliers-companyname
+limit 100;
+
+orders - employees		region
+employeeid			regionid ->
+				regiondescription
+	firstname, lastname
+	  
+
+orderdetails-products --> preductid
+products-categories --> categoryid
+products-supp´liers --> supplierid
+ select a.orderid, b.productname, b.cuantity, b.unitprice,
+(b.quantity * b.unitprice) as subtotal, c.categoryname, d.companyname
+from details a
+
+inner join producr b on a.productid = b.productid
+inner join categories c on  b.categoryid= c.categoryid
+inner join suppliers 
